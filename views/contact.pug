@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title Osumare
+        style
+            include ../static/style.css
+block content
+    nav#navbar
+            #logo
+                img(src='../static/osumare_logo.jpg', alt='Osumare _logo')
+            ul
+                li.item  #[a(href="/") Contact US]
+    section.contact
+            h1.h-primary Contact us
+            .contact-box
+                form(action="/contact" method="post")
+                    .form-group
+                        label(for="Name") Name:
+                        input(type="text" name="Name" id="Name" placeholder="Enter your name")
+                    .form-group
+                        label(for="Email") Email:
+                        input(type="text" name="Email" id="Email" placeholder="Enter your email")
+                    .form-group
+                        label(for="Phone") Phone:
+                        input(type="text" name="Phone" id="Phone" placeholder="Enter your phone")
+                    .form-group
+                        label(for="Message") Message:
+                        input(type="text" name="Message" id="Message" placeholder="Message")
+                    .form-group1
+                        input(type="Submit")
+                    .form-group1
+                        input(type="reset")
